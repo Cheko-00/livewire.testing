@@ -8,4 +8,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
 });
 
-require __DIR__.'/settings.php';
+Route::livewire('/users', 'users.user-index')->name('users');
+
+require __DIR__ . '/settings.php';
